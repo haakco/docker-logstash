@@ -8,7 +8,7 @@ ADD files/docker-entrypoint.start.sh /usr/local/bin/docker-entrypoint.start.sh
 #RUN for PLUGIN in $(/usr/share/logstash/bin/logstash-plugin list); do /usr/share/logstash/bin/logstash-plugin update $PLUGIN; done
 RUN /usr/share/logstash/bin/logstash-plugin update logstash-input-beats
 
-RUN chmod u+x /usr/local/bin/docker-logstash.start.sh
+RUN chmod u+x /usr/local/bin/docker-entrypoint.start.sh
 
 ENV ELK_ELASTICSEARCH_USERNAME="elastic" \
   ELK_ELASTIC_PASSWORD=""
